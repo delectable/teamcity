@@ -245,7 +245,7 @@ func (c *Client) doRequest(method string, path string, data interface{}, v inter
 }
 
 func (c *Client) doNotJSONRequest(method string, path string, data interface{}) ([]byte, error) {
-	authURL := fmt.Sprintf("https://%s%s", c.host, path)
+	authURL := fmt.Sprintf("http://%s%s", c.host, path)
 
 	fmt.Printf("Sending request to %s\n", authURL)
 
